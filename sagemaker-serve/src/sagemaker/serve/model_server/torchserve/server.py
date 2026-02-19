@@ -29,7 +29,7 @@ class LocalTorchServe:
             detach=True,
             auto_remove=True,
             # network_mode="host",
-            ports={'8080/tcp': 8080},
+            ports={"8080/tcp": 8080},
             volumes={
                 Path(model_path): {
                     "bind": "/opt/ml/model",

@@ -56,7 +56,7 @@ def prepare_for_tf_serving(
     if not mlflow_saved_model_dir:
         raise ValueError("SavedModel is not found for Tensorflow or Keras flavor.")
     _move_contents(src_dir=mlflow_saved_model_dir, dest_dir=saved_model_bundle_dir)
-    
+
     secret_key = generate_secret_key()
     with open(str(code_dir.joinpath("serve.pkl")), "rb") as f:
         buffer = f.read()

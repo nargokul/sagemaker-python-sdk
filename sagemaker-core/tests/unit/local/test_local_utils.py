@@ -154,7 +154,7 @@ def test_get_docker_host(m_subprocess):
         ("Experiences[0].Company", "Foo Inc."),
         ("Experiences[0].Tenure", 5),
         ("Experiences[0].Projects[0]['XYZ project']", "Backend Rest Api development"),
-        ("Experiences[0].Projects[1]['ABC project']", "Data migration"),
+        ("Experiences[0].Projects[1]['ABC project']", "Data migration.md"),
         ("Experiences[1].Company", "Bar Ltd."),
         ("Experiences[1].Tenure", 2),
     ],
@@ -170,7 +170,7 @@ def test_get_using_dot_notation(json_path, expected):
                 "Tenure": 5,
                 "Projects": [
                     {"XYZ project": "Backend Rest Api development"},
-                    {"ABC project": "Data migration"},
+                    {"ABC project": "Data migration.md"},
                 ],
             },
             {"Company": "Bar Ltd.", "Role": "Web developer", "Tenure": 2},

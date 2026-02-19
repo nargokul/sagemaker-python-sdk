@@ -5,7 +5,7 @@ from unittest.mock import patch, mock_open
 from sagemaker.serve.validations.check_integrity import (
     generate_secret_key,
     compute_hash,
-    perform_integrity_check
+    perform_integrity_check,
 )
 
 
@@ -41,7 +41,7 @@ class TestCheckIntegrity(unittest.TestCase):
         mock_exists.return_value = True
         mock_meta = type("obj", (object,), {"sha256_hash": "wrong_hash"})()
         mock_metadata.return_value = mock_meta
-        
+
         with self.assertRaises(ValueError):
             perform_integrity_check(b"test", Path("/tmp/metadata.json"))
 

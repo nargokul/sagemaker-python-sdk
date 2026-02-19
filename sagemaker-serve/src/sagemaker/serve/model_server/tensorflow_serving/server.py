@@ -37,7 +37,7 @@ class LocalTensorflowServing:
             detach=True,
             auto_remove=False,  # Temporarily disabled to see crash logs
             # network_mode="host",
-            ports={'8501/tcp': 8501},
+            ports={"8501/tcp": 8501},
             volumes={
                 Path(model_path): {
                     "bind": "/opt/ml/model",

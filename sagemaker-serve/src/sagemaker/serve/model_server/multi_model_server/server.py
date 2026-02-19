@@ -47,7 +47,7 @@ class LocalMultiModelServer:
             image,
             "serve",
             # network_mode="host",
-            ports={'8080/tcp': 8080},
+            ports={"8080/tcp": 8080},
             detach=True,
             auto_remove=True,
             volumes={

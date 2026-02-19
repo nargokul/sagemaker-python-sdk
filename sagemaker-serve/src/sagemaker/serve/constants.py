@@ -71,21 +71,23 @@ SUPPORTED_MODEL_SERVERS: Set[ModelServer] = {
 # Framework Enum
 # ========================================
 
+
 class Framework(Enum):
     """Enumeration of supported ML frameworks for ModelBuilder.
-    
+
     This enum provides standardized framework identifiers used throughout
     the ModelBuilder ecosystem for:
     - Framework detection from container images
     - Serializer/deserializer selection
     - Model server compatibility
-    
+
     Example:
         Using framework enum::
-        
+
             if detected_framework == Framework.PYTORCH:
                 serializer, deserializer = DEFAULT_SERIALIZERS_BY_FRAMEWORK[Framework.PYTORCH]
     """
+
     XGBOOST = "XGBoost"
     LDA = "LDA"
     PYTORCH = "PyTorch"
@@ -118,4 +120,3 @@ DEFAULT_SERIALIZERS_BY_FRAMEWORK: Dict[Framework, Tuple] = {
     Framework.NTM: (RecordSerializer(), JSONDeserializer()),
     Framework.SMD: (JSONSerializer(), JSONDeserializer()),
 }
-

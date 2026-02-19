@@ -56,7 +56,9 @@ def prepare_for_torchserve(
     # https://github.com/aws/sagemaker-python-sdk/issues/4288
     if is_1p_image_uri(image_uri=image_uri) and "xgboost" in image_uri:
         shutil.copy2(Path(__file__).parent.joinpath("xgboost_inference.py"), code_dir)
-        os.rename(str(code_dir.joinpath("xgboost_inference.py")), str(code_dir.joinpath("inference.py")))
+        os.rename(
+            str(code_dir.joinpath("xgboost_inference.py")), str(code_dir.joinpath("inference.py"))
+        )
     else:
         shutil.copy2(Path(__file__).parent.joinpath("inference.py"), code_dir)
 

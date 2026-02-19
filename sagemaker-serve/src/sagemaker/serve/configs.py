@@ -21,6 +21,7 @@ from dataclasses import dataclass
 @dataclass
 class Network:
     """Network configuration for model deployment."""
+
     subnets: Optional[List[str]] = None
     security_group_ids: Optional[List[str]] = None
     enable_network_isolation: bool = False
@@ -30,5 +31,6 @@ class Network:
 @dataclass
 class Compute:
     """Compute configuration for model deployment."""
+
     instance_type: Optional[str]
     instance_count: Optional[int] = 1

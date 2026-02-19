@@ -442,5 +442,5 @@ def _move_contents(src_dir: Union[str, Path], dest_dir: Union[str, Path]) -> Non
     for item in _src_dir.iterdir():
         _dest_path = _dest_dir / item.name
         shutil.move(str(item), str(_dest_path))
-    
+
     _src_dir.rmdir()

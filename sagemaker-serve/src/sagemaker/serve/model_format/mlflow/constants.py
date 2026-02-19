@@ -49,6 +49,6 @@ FLAVORS_WITH_FRAMEWORK_SPECIFIC_DLC_SUPPORT = {
     "xgboost": "xgboost",
     "tensorflow": "tensorflow",
     "keras": "tensorflow",
-    "spark": "sparkml"
+    "spark": "sparkml",
 }
 FLAVORS_DEFAULT_WITH_TF_SERVING = ["keras", "tensorflow"]
