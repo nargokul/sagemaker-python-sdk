@@ -723,6 +723,10 @@ def setup_training_data() -> List[InputData]:
     ]
 ```
 
+## MCP Server
+
+This AI-powered migration tool is available as an MCP server that can analyze your V2 code, transform it to V3, validate the results, and answer migration questions interactively through your IDE.
+
 ## Conclusion
 
 Migrating from SageMaker Python SDK V2 to V3 provides significant benefits in terms of developer experience, code organization, and access to new features. While the migration requires updating code patterns and imports, the structured approach of V3 leads to more maintainable and robust machine learning workflows.
