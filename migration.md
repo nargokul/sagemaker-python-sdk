@@ -74,7 +74,7 @@ Add the following to your MCP configuration file:
 }
 ```
 
-> **Note**: If you installed in a virtual environment, use the full path to the executable (find it with `which sagemaker-migration-mcp`).
+> **Note**: If you installed in a virtual environment, use the full path to the executable (find it with `which sagemaker-sdk-helper`).
 
 After updating the config, restart your IDE or reconnect MCP servers (in Kiro: Command Palette → "MCP: Reconnect Servers").
 
@@ -130,10 +130,10 @@ You can also point the tool at entire notebooks for full conversion.
 
 ### Troubleshooting
 
-- **Server not starting**: Verify the command path with `which sagemaker-migration-mcp`. Requires Python 3.9+.
-- **Permission denied**: Run `chmod +x /path/to/.venv/bin/sagemaker-migration-mcp`
+- **Server not starting**: Verify the command path with `which sagemaker-sdk-helper`. Requires Python 3.9+.
+- **Permission denied**: Run `chmod +x /path/to/.venv/bin/sagemaker-sdk-helper`
 - **Artifacts not loading**: Paths must be absolute. The server works without artifacts but with reduced accuracy.
-- **Manual test**: `echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | sagemaker-migration-mcp`
+- **Manual test**: `echo '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | sagemaker-sdk-helper`
 
 ---
 
